@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  background: #333;
+  margin: 0 2rem;
+}
+div {
+  max-width: 900px;
+  height: 100vh;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#rocket {
+  animation: rocket 2s ease-in-out infinite alternate;
+  transform-origin: top;
+}
+
+#line-1,
+#line-2,
+#line-3 {
+  animation: lines 1s ease-in infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#line-2 {
+  animation-delay: 150ms;
+}
+
+#line-3 {
+  animation-delay: 300ms;
+}
+
+#star-1,
+#star-2 {
+  animation: helmet-stars 1ms ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star-4,
+#star-7,
+#star-10 {
+  animation: small-stars 1ms ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star-3,
+#star-5,
+#star-6,
+#star-8,
+#star-9 {
+  animation: stars 1ms ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#planet-2 {
+  animation: comet 10s ease-in infinite;
+  position: relative;
+}
+
+#planet-3 {
+  color: #fff;
+}
+
+@keyframes rocket {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(1%, 5%);
+  }
+}
+
+@keyframes lines {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes helmet-stars {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(3);
+  }
+}
+
+@keyframes small-stars {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+@keyframes stars {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(4);
+  }
+}
+
+@keyframes comet {
+  from {
+    top: -400px;
+    right: -900px;
+  }
+  to {
+    top: 345px;
+    right: 900px;
+  }
+}
